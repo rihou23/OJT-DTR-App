@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gray">
+
+    <!-- My Rank Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/my_purple">
+        <TextView
+            android:id="@+id/tvMyRankHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="My Rank: Loading..."
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Filter Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="5dp">
+        <Button android:id="@+id/btnFilterAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ALL" android:layout_margin="4dp"/>
+        <Button android:id="@+id/btnFilterDept" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MY DEPT" android:layout_margin="4dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStudents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

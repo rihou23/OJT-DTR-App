@@ -1,0 +1,14 @@
+<resources>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="darkBlue">#1A237E</color>
+    <color name="darkPurple">#4A148C</color>
+
+    <color name="dark_gray">#444444</color>
+    <color name="my_purple">#6200EE</color>
+    <color name="light_gray">#F5F5F5</color>
+
+    <color name="primary_purple">#6200EE</color>
+    <color name="light_bg">#F8F9FA</color>
+</resources>

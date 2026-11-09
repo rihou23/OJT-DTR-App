@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#1976D2"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif-black"
+            android:text="Edit Profile"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update your information"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- Profile Image Section -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivEditProfileImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="#EEEEEE"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile_placeholder"
+                    app:shapeAppearanceOverlay="@style/CircleImage"
+                    app:strokeColor="#DDDDDD"
+                    app:strokeWidth="2dp" />
+
+                <ImageView
+                    android:id="@+id/btnChangePhoto"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/bg_input_field"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_camera"
+                    android:contentDescription="Change photo"/>
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btnSelectPhoto"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="Change Profile Picture"
+                android:textColor="#275BB0"
+                android:textAllCaps="false" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="First Name" android:textColor="#424242" android:textSize="12sp" android:layout_marginBottom="4dp" />
+                    <EditText android:id="@+id/etFirstName" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input_field" android:paddingHorizontal="12dp" android:textColor="#212121" android:inputType="textPersonName" />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Middle Name" android:textColor="#424242" android:textSize="12sp" android:layout_marginTop="12dp" android:layout_marginBottom="4dp" />
+                    <EditText android:id="@+id/etMiddleName" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input_field" android:paddingHorizontal="12dp" android:textColor="#212121" android:inputType="textPersonName" />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Last Name" android:textColor="#424242" android:textSize="12sp" android:layout_marginTop="12dp" android:layout_marginBottom="4dp" />
+                    <EditText android:id="@+id/etLastName" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input_field" android:paddingHorizontal="12dp" android:textColor="#212121" android:inputType="textPersonName" />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Section" android:textColor="#424242" android:textSize="12sp" android:layout_marginTop="12dp" android:layout_marginBottom="4dp" />
+                    <Spinner android:id="@+id/etSection" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/bg_input_field" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnSaveProfile"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="40dp"
+                android:backgroundTint="#275BB0"
+                android:text="SUBMIT REQUEST"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/loadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="10dp">
+        <ProgressBar android:layout_width="60dp" android:layout_height="60dp" android:indeterminateTint="#FFFFFF" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Processing..." android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

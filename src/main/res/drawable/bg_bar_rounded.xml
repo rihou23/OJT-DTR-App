@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Default color (will be overridden in Kotlin) -->
+    <solid android:color="#1976D2" />
+
+    <!-- Rounded corners - higher radius makes it look like a pill -->
+    <corners
+        android:radius="20dp" />
+
+</shape>

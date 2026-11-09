@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        android:weightSum="5.2">
+
+        <TextView
+            android:id="@+id/txtDateReport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#333333"/>
+
+        <!-- MORNING BLOCK -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView android:id="@+id/txtAmIn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="11sp" android:textColor="#666666"/>
+            <TextView android:id="@+id/txtAmLate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="10sp" android:textColor="#D32F2F" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- AFTERNOON BLOCK -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView android:id="@+id/txtPmIn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="11sp" android:textColor="#666666"/>
+            <TextView android:id="@+id/txtPmLate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="10sp" android:textColor="#D32F2F" android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE" />
+</LinearLayout>

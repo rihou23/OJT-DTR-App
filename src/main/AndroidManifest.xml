@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyArUNvJlQCTQcHLIHknTr_TjPEbgxKuSzg" />
+
+
+
+        <activity
+            android:name=".testting"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".GeofenceActivity"
+            android:exported="false"
+            android:noHistory="true"
+            android:excludeFromRecents="true" />
+
+        <activity android:name=".DashboardActivity"/>
+
+        <activity android:name=".ViewAbsentsActivity"/>
+
+        <activity android:name=".RequestAbsentActivity"/>
+
+        <activity android:name=".OjtDetailsActivity"/>
+
+        <activity android:name=".LeaderboardActivity"/>
+
+
+
+
+
+        <activity android:name=".AbsentDetailActivity"/>
+
+        <activity android:name=".EditProfileActivity"/>
+
+        <activity android:name=".ReportsActivity"/>
+
+        <activity android:name=".RegisterActivity"/>
+
+        <activity android:name=".AttendanceActivity"/>
+
+        <activity android:name=".AttendanceReportActivity"/>
+
+        <activity android:name=".AttendanceRecActivity"/>
+
+        <activity android:name=".MissedTimeoutActivity"/>
+
+        <activity android:name=".CalendarActivity"/>
+
+        <activity android:name=".ProfileActivity" />
+
+        <activity android:name=".FaqActivity" />
+
+        <activity android:name=".UserNotificationsActivity" />
+
+        <activity android:name=".ViewOjtDetailsActivity" />
+
+
+        <activity android:name=".EditOjtDetailsActivity" />
+
+
+
+
+
+
+        <activity android:name=".RequestCompletionActivity" />
+
+
+
+        <receiver
+            android:name=".GeofenceReceiver"
+            android:exported="false" />
+
+        <!-- BOOT RECEIVER -->
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- BOOT RECEIVER -->
+
+
+        <!-- Boot Receiver to restore geofence -->
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+    </application>
+</manifest>

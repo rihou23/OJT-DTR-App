@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 1. The Border Color (Gray) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#DDDDDD" />
+        </shape>
+    </item>
+
+    <!-- 2. The Main Background (White) -->
+    <!-- This layer is placed on top of the gray layer.
+         By setting android:bottom="1dp", we reveal 1dp of the gray layer
+         at the very bottom, creating the border effect. -->
+    <item android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+</layer-list>
